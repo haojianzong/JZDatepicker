@@ -9,9 +9,9 @@
 extern const CGFloat kJZDatepickerItemWidth;
 
 // use cell's tint color to for theming
+
 @interface JZDatepickerCell : UICollectionViewCell
 
-// data
 @property (strong, nonatomic) NSDate *date;
 
 @end

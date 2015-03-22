@@ -15,9 +15,9 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 35.;
 
 @property (strong, nonatomic) UILabel *dayLabel;
 @property (strong, nonatomic) UILabel *topLabel;
-@property (nonatomic, strong) JZDatepickerCircleView *selectionView;
+@property (nonatomic, strong) JZDatepickerCircleView *circleView;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
-@property (nonatomic, strong) NSLayoutConstraint *selectionViewWidthConstraint;
+@property (nonatomic, strong) NSLayoutConstraint *circleViewWidthConstraint;
 
 @end
 
@@ -71,31 +71,31 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 35.;
                                                     multiplier:1.0
                                                       constant:10]];
     
-    // selectionView
-    self.selectionView.translatesAutoresizingMaskIntoConstraints = NO;
-    self.selectionViewWidthConstraint = [NSLayoutConstraint constraintWithItem:self.selectionView
+    // circleView
+    self.circleView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.circleViewWidthConstraint = [NSLayoutConstraint constraintWithItem:self.circleView
                                                            attribute:NSLayoutAttributeWidth
                                                            relatedBy:NSLayoutRelationEqual
                                                               toItem:nil
                                                            attribute:NSLayoutAttributeNotAnAttribute
                                                           multiplier:1.0
                                                             constant:kJZDatepickerBackgroundCircleWidth];
-    [self addConstraint:self.selectionViewWidthConstraint];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionView
+    [self addConstraint:self.circleViewWidthConstraint];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.circleView
                                                      attribute:NSLayoutAttributeHeight
                                                      relatedBy:NSLayoutRelationEqual
-                                                        toItem:self.selectionView
+                                                        toItem:self.circleView
                                                      attribute:NSLayoutAttributeWidth
                                                     multiplier:1.0
                                                       constant:0.0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionView
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.circleView
                                                      attribute:NSLayoutAttributeCenterX
                                                      relatedBy:NSLayoutRelationEqual
                                                         toItem:self.dayLabel
                                                      attribute:NSLayoutAttributeCenterX
                                                     multiplier:1.0
                                                       constant:0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionView
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.circleView
                                                      attribute:NSLayoutAttributeCenterY
                                                      relatedBy:NSLayoutRelationEqual
                                                         toItem:self.dayLabel
@@ -108,7 +108,7 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 35.;
 - (void)prepareForReuse
 {
     [self setSelected:NO];
-    self.selectionView.alpha = 0.0f;
+    self.circleView.alpha = 0.0f;
 }
 
 #pragma mark - Setters
@@ -137,25 +137,25 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 35.;
 {
     [super setHighlighted:highlighted];
     
-    self.selectionView.hidden = NO;
+    self.circleView.hidden = NO;
     if (highlighted) {
-        self.selectionView.alpha = self.isSelected ? 1 : .5;
+        self.circleView.alpha = self.isSelected ? 1 : .5;
     } else {
-        self.selectionView.alpha = self.isSelected ? 1 : 0;
+        self.circleView.alpha = self.isSelected ? 1 : 0;
     }
 }
 
 - (void)setSelected:(BOOL)selected
 {
     [super setSelected:selected];
-//    self.selectionViewWidthConstraint.constant = (selected) ? 35 : 0;
+//    self.circleViewWidthConstraint.constant = (selected) ? 35 : 0;
 //    [UIView animateWithDuration:0.3
 //                          delay:0.0
 //                        options:UIViewAnimationOptionCurveEaseOut
 //                     animations:^{
 //                         [self layoutIfNeeded];
 //                     } completion:nil];
-    self.selectionView.alpha = (selected)?1.0f:0.0f;
+    self.circleView.alpha = (selected)?1.0f:0.0f;
     self.dayLabel.textColor = (selected)? [UIColor whiteColor] : [UIColor blackColor];
 }
 
@@ -184,18 +184,18 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 35.;
     return _topLabel;
 }
 
-- (UIView *)selectionView
+- (UIView *)circleView
 {
-    if (!_selectionView) {
-        _selectionView = [[JZDatepickerCircleView alloc] init];
-        _selectionView.alpha = 0.0f;
-        _selectionView.backgroundColor = self.tintColor;
-        _selectionView.opaque = NO;
-        [self addSubview:_selectionView];
-        [self sendSubviewToBack:_selectionView];
+    if (!_circleView) {
+        _circleView = [[JZDatepickerCircleView alloc] init];
+        _circleView.alpha = 0.0f;
+        _circleView.backgroundColor = self.tintColor;
+        _circleView.opaque = NO;
+        [self addSubview:_circleView];
+        [self sendSubviewToBack:_circleView];
     }
     
-    return _selectionView;
+    return _circleView;
 }
 
 - (NSDateFormatter *)dateFormatter
