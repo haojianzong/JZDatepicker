@@ -46,7 +46,7 @@
         _monthLabel = [[UILabel alloc] init];
         _monthLabel.lineBreakMode = NSLineBreakByCharWrapping;
         _monthLabel.transform = CGAffineTransformMakeRotation((M_PI)/2);
-        _monthLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12];
+        _monthLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:16];
     }
     return _monthLabel;
 }
@@ -55,7 +55,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         [self setup];
-        [self setBackgroundColor:[UIColor whiteColor]];
+        [self setBackgroundColor:self.tintColor];
     }
     return self;
 }
@@ -80,8 +80,9 @@
                                                     multiplier:1.0
                                                       constant:0.0]];
     // add border
-    self.layer.borderColor = [UIColor grayColor].CGColor;
-    self.layer.borderWidth = 1.0f;
+//    self.layer.borderColor = [UIColor grayColor].CGColor;
+//    self.layer.borderWidth = 1.0f;
+    self.tintColor = [UIColor colorWithRed:1.000f green:0.835f blue:0.404f alpha:1.00f];
 }
 
 @end

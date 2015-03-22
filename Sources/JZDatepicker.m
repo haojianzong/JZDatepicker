@@ -8,7 +8,7 @@
 #import "JZDatepickerMonthView.h"
 #import "StickyHeaderFlowLayout.h"
 
-const CGFloat kJZDatepickerHeight = 60.;
+const CGFloat kJZDatepickerHeight = 50.;
 const CGFloat kJZDatepickerSpaceBetweenItems = 0.;
 const CGFloat kJZDatepickerHeaderWidth = 30.;
 NSString * const kJZDatepickerCellIndentifier = @"kJZDatepickerCellIndentifier";
@@ -47,7 +47,7 @@ NSString * const kJZDatepickerHeaderIdentifier = @"kJZDatepickerHeaderIndentifie
 - (void)setupViews
 {
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor blackColor];
 }
 
 #pragma mark Setters | Getters
@@ -259,6 +259,7 @@ NSString * const kJZDatepickerHeaderIdentifier = @"kJZDatepickerHeaderIndentifie
 {
     JZDatepickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kJZDatepickerCellIndentifier forIndexPath:indexPath];
     cell.date = [self dateAtIndexPath:indexPath];
+    cell.tintColor = self.tintColor;
     return cell;
 }
 
