@@ -34,10 +34,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vY-Dj-zet" customClass="JZDatepicker">
-                                <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="60"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79215686269999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="iWI-ER-4bl"/>
+                                    <constraint firstAttribute="height" constant="60" id="iWI-ER-4bl"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pick a date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKG-5J-dAS">
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCi-EZ-bvR">
-                                <rect key="frame" x="0.0" y="114" width="600" height="8"/>
+                                <rect key="frame" x="0.0" y="124" width="600" height="8"/>
                                 <color key="backgroundColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="vEP-Aw-pBk"/>

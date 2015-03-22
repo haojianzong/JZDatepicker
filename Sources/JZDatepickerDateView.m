@@ -8,7 +8,7 @@
 
 
 const CGFloat kJZDatepickerItemWidth = 70.;
-const CGFloat kJZDatepickerBackgroundCircleWidth = 35.;
+const CGFloat kJZDatepickerBackgroundCircleWidth = 30.;
 
 
 @interface JZDatepickerCell ()
