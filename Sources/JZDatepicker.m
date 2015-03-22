@@ -14,9 +14,9 @@ const CGFloat kJZDatepickerHeaderWidth = 30.;
 NSString * const kJZDatepickerCellIndentifier = @"kJZDatepickerCellIndentifier";
 NSString * const kJZDatepickerHeaderIdentifier = @"kJZDatepickerHeaderIndentifier";
 
-@interface JZDatepicker (){
-    NSIndexPath *selectedIndexPath;
-}
+@interface JZDatepicker ()
+
+@property (strong, nonatomic) NSIndexPath *selectedIndexPath;
 
 @property (strong, nonatomic) UICollectionView *datesCollectionView;
 @property (strong, nonatomic, readwrite) NSDate *selectedDate;
@@ -109,9 +109,9 @@ NSString * const kJZDatepickerHeaderIdentifier = @"kJZDatepickerHeaderIndentifie
     _selectedDate = selectedDate;
     
     NSIndexPath *selectedCellIndexPath = [NSIndexPath indexPathForItem:[self.dates indexOfObject:selectedDate] inSection:0];
-    [self.datesCollectionView deselectItemAtIndexPath:selectedIndexPath animated:YES];
+    [self.datesCollectionView deselectItemAtIndexPath:self.selectedIndexPath animated:YES];
     [self.datesCollectionView selectItemAtIndexPath:selectedCellIndexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
-    selectedIndexPath = selectedCellIndexPath;
+    self.selectedIndexPath = selectedCellIndexPath;
     
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
@@ -272,12 +272,12 @@ NSString * const kJZDatepickerHeaderIdentifier = @"kJZDatepickerHeaderIndentifie
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return ![indexPath isEqual:selectedIndexPath];
+    return ![indexPath isEqual:self.selectedIndexPath];
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return ![indexPath isEqual:selectedIndexPath];
+    return ![indexPath isEqual:self.selectedIndexPath];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -285,8 +285,8 @@ NSString * const kJZDatepickerHeaderIdentifier = @"kJZDatepickerHeaderIndentifie
     //[self.datesCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     _selectedDate = [self dateAtIndexPath:indexPath];
     
-    [collectionView deselectItemAtIndexPath:selectedIndexPath animated:YES];
-    selectedIndexPath = indexPath;
+    [collectionView deselectItemAtIndexPath:self.selectedIndexPath animated:YES];
+    self.selectedIndexPath = indexPath;
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
