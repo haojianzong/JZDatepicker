@@ -17,12 +17,13 @@ NSString * const kJZDatepickerHeaderIdentifier = @"kJZDatepickerHeaderIndentifie
 @interface JZDatepicker ()
 
 @property (strong, nonatomic) NSIndexPath *selectedIndexPath;
-
-@property (strong, nonatomic) UICollectionView *datesCollectionView;
 @property (strong, nonatomic, readwrite) NSDate *selectedDate;
 // map dates into a dictionary so that we can group them into sections
 @property (strong, nonatomic) NSMutableDictionary *monthDaysDict;
+
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
+
+@property (strong, nonatomic) UICollectionView *datesCollectionView;
 
 @end
 
