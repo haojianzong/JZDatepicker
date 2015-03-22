@@ -211,7 +211,7 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 35.;
 
 - (BOOL)isWeekday:(NSDate *)date
 {
-    NSInteger day = [[[NSCalendar currentCalendar] components:NSWeekdayCalendarUnit fromDate:date] weekday];
+    NSInteger day = [[[NSCalendar currentCalendar] components:NSCalendarUnitWeekday fromDate:date] weekday];
     
     const NSInteger kSunday = 1;
     const NSInteger kSaturday = 7;
@@ -224,9 +224,9 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 35.;
 - (BOOL)isToday:(NSDate *)date
 {
     NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
+    NSDateComponents *components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:[NSDate date]];
     NSDate *today = [cal dateFromComponents:components];
-    components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:date];
+    components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:date];
     NSDate *otherDate = [cal dateFromComponents:components];
     
     if([today isEqualToDate:otherDate]) {

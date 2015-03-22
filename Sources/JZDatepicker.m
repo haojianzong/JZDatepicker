@@ -155,7 +155,7 @@ NSString * const kJZDatepickerHeaderIdentifier = @"kJZDatepickerHeaderIndentifie
 
 - (void)selectDate:(NSDate *)date
 {
-    [[NSCalendar currentCalendar] rangeOfUnit:NSDayCalendarUnit startDate:&date interval:NULL forDate:date];
+    [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay startDate:&date interval:NULL forDate:date];
     
     NSAssert([self.dates indexOfObject:date] != NSNotFound, @"Date not found in dates array");
     
