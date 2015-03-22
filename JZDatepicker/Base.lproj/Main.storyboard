@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vY-Dj-zet" customClass="DIDatepicker">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="83"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="iWI-ER-4bl"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pick a date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKG-5J-dAS">
+                                <rect key="frame" x="257.5" y="289" width="85" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPN-Q1-fL6">
+                                <rect key="frame" x="283" y="338" width="34" height="30"/>
+                                <state key="normal" title="reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetSelectedBtnTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rLu-s0-Fwm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WPN-Q1-fL6" firstAttribute="top" secondItem="OKG-5J-dAS" secondAttribute="bottom" constant="28.5" id="0F8-Qv-vda"/>
+                            <constraint firstItem="8vY-Dj-zet" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="1e4-jU-K3t"/>
+                            <constraint firstItem="8vY-Dj-zet" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="MJ3-Qp-pYq"/>
+                            <constraint firstAttribute="centerY" secondItem="OKG-5J-dAS" secondAttribute="centerY" id="MqF-uA-LHZ"/>
+                            <constraint firstAttribute="width" secondItem="8vY-Dj-zet" secondAttribute="width" id="Pzr-XQ-tGP"/>
+                            <constraint firstItem="WPN-Q1-fL6" firstAttribute="centerX" secondItem="OKG-5J-dAS" secondAttribute="centerX" id="UpT-Lc-Ief"/>
+                            <constraint firstAttribute="trailing" secondItem="8vY-Dj-zet" secondAttribute="trailing" id="fNC-HQ-1ZI"/>
+                            <constraint firstAttribute="centerX" secondItem="OKG-5J-dAS" secondAttribute="centerX" id="wdv-Ph-YGD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datepicker" destination="8vY-Dj-zet" id="QfU-9j-mYM"/>
+                        <outlet property="selectedDateLabel" destination="OKG-5J-dAS" id="0Nr-9a-6UY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
