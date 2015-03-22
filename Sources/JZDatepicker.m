@@ -3,18 +3,18 @@
 //  Copyright (c) 2014 Dmitry Ivanenko. All rights reserved.
 //
 
-#import "DIDatepicker.h"
-#import "DIDatepickerDateView.h"
-#import "DIDatepickerMonthView.h"
+#import "JZDatepicker.h"
+#import "JZDatepickerDateView.h"
+#import "JZDatepickerMonthView.h"
 #import "StickyHeaderFlowLayout.h"
 
-const CGFloat kDIDatepickerHeight = 60.;
-const CGFloat kDIDatepickerSpaceBetweenItems = 0.;
-const CGFloat kDIDatepickerHeaderWidth = 30.;
-NSString * const kDIDatepickerCellIndentifier = @"kDIDatepickerCellIndentifier";
-NSString * const kDIDatepickerHeaderIdentifier = @"kDIDatepickerHeaderIndentifier";
+const CGFloat kJZDatepickerHeight = 60.;
+const CGFloat kJZDatepickerSpaceBetweenItems = 0.;
+const CGFloat kJZDatepickerHeaderWidth = 30.;
+NSString * const kJZDatepickerCellIndentifier = @"kJZDatepickerCellIndentifier";
+NSString * const kJZDatepickerHeaderIdentifier = @"kJZDatepickerHeaderIndentifier";
 
-@interface DIDatepicker (){
+@interface JZDatepicker (){
     NSIndexPath *selectedIndexPath;
 }
 
@@ -27,7 +27,7 @@ NSString * const kDIDatepickerHeaderIdentifier = @"kDIDatepickerHeaderIndentifie
 @end
 
 
-@implementation DIDatepicker
+@implementation JZDatepicker
 
 - (void)awakeFromNib
 {
@@ -120,15 +120,15 @@ NSString * const kDIDatepickerHeaderIdentifier = @"kDIDatepickerHeaderIndentifie
 {
     if (!_datesCollectionView) {
         UICollectionViewFlowLayout *collectionViewLayout = [[StickyHeaderFlowLayout alloc] init];
-        [collectionViewLayout setItemSize:CGSizeMake(kDIDatepickerItemWidth, CGRectGetHeight(self.bounds))];
+        [collectionViewLayout setItemSize:CGSizeMake(kJZDatepickerItemWidth, CGRectGetHeight(self.bounds))];
         [collectionViewLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-        [collectionViewLayout setSectionInset:UIEdgeInsetsMake(0, kDIDatepickerSpaceBetweenItems, 0, kDIDatepickerSpaceBetweenItems)];
-        [collectionViewLayout setMinimumLineSpacing:kDIDatepickerSpaceBetweenItems];
-        [collectionViewLayout setHeaderReferenceSize:CGSizeMake(kDIDatepickerHeaderWidth, self.bounds.size.height)];
+        [collectionViewLayout setSectionInset:UIEdgeInsetsMake(0, kJZDatepickerSpaceBetweenItems, 0, kJZDatepickerSpaceBetweenItems)];
+        [collectionViewLayout setMinimumLineSpacing:kJZDatepickerSpaceBetweenItems];
+        [collectionViewLayout setHeaderReferenceSize:CGSizeMake(kJZDatepickerHeaderWidth, self.bounds.size.height)];
         
         _datesCollectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:collectionViewLayout];
-        [_datesCollectionView registerClass:[DIDatepickerCell class] forCellWithReuseIdentifier:kDIDatepickerCellIndentifier];
-        [_datesCollectionView registerClass:[DIDatepickerMonthView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kDIDatepickerHeaderIdentifier];
+        [_datesCollectionView registerClass:[JZDatepickerCell class] forCellWithReuseIdentifier:kJZDatepickerCellIndentifier];
+        [_datesCollectionView registerClass:[JZDatepickerMonthView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kJZDatepickerHeaderIdentifier];
         [_datesCollectionView setBackgroundColor:[UIColor clearColor]];
         [_datesCollectionView setShowsHorizontalScrollIndicator:NO];
         [_datesCollectionView setAllowsMultipleSelection:YES];
@@ -256,14 +256,14 @@ NSString * const kDIDatepickerHeaderIdentifier = @"kDIDatepickerHeaderIndentifie
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DIDatepickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kDIDatepickerCellIndentifier forIndexPath:indexPath];
+    JZDatepickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kJZDatepickerCellIndentifier forIndexPath:indexPath];
     cell.date = [self dateAtIndexPath:indexPath];
     return cell;
 }
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    DIDatepickerMonthView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:kDIDatepickerHeaderIdentifier forIndexPath:indexPath];
+    JZDatepickerMonthView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:kJZDatepickerHeaderIdentifier forIndexPath:indexPath];
     // use first date's month
     NSDate *date = [self daysArrayInSection:indexPath.section].firstObject;
     view.date = date;

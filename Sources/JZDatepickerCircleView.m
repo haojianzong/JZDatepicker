@@ -1,14 +1,14 @@
 //
-//  DIDatePickerCircleView.m
-//  DIDatepicker
+//  JZDatepickerCircleView.m
+//  JZDatepicker
 //
 //  Created by haojianzong on 9/12/14.
 //  Copyright (c) 2014 Dmitry Ivanenko. All rights reserved.
 //
 
-#import "DIDatePickerCircleView.h"
+#import "JZDatepickerCircleView.h"
 
-@implementation DIDatePickerCircleView
+@implementation JZDatepickerCircleView
 
 - (id)init
 {

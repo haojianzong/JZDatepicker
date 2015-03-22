@@ -6,10 +6,10 @@
 #import <UIKit/UIKit.h>
 
 
-extern const CGFloat kDIDatepickerItemWidth;
+extern const CGFloat kJZDatepickerItemWidth;
 
 // use cell's tint color to for theming
-@interface DIDatepickerCell : UICollectionViewCell
+@interface JZDatepickerCell : UICollectionViewCell
 
 // data
 @property (strong, nonatomic) NSDate *date;

@@ -14,11 +14,11 @@
 		07E01CA11ABEB6880073D7FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E01CA01ABEB6880073D7FA /* Images.xcassets */; };
 		07E01CA41ABEB6880073D7FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07E01CA21ABEB6880073D7FA /* LaunchScreen.xib */; };
 		07E01CB01ABEB6880073D7FA /* JZDatepickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E01CAF1ABEB6880073D7FA /* JZDatepickerTests.m */; };
-		07E01CD31ABEB9360073D7FA /* DIDatePickerCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E01CCA1ABEB9360073D7FA /* DIDatePickerCircleView.m */; };
-		07E01CD41ABEB9360073D7FA /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E01CCC1ABEB9360073D7FA /* DIDatepicker.m */; };
-		07E01CD51ABEB9360073D7FA /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E01CCE1ABEB9360073D7FA /* DIDatepickerDateView.m */; };
-		07E01CD61ABEB9360073D7FA /* DIDatepickerMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E01CD01ABEB9360073D7FA /* DIDatepickerMonthView.m */; };
-		07E01CD71ABEB9360073D7FA /* StickyHeaderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E01CD21ABEB9360073D7FA /* StickyHeaderFlowLayout.m */; };
+		07E01CE21ABEBB3F0073D7FA /* JZDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E01CD91ABEBB3F0073D7FA /* JZDatepicker.m */; };
+		07E01CE31ABEBB3F0073D7FA /* JZDatepickerCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E01CDB1ABEBB3F0073D7FA /* JZDatepickerCircleView.m */; };
+		07E01CE41ABEBB3F0073D7FA /* JZDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E01CDD1ABEBB3F0073D7FA /* JZDatepickerDateView.m */; };
+		07E01CE51ABEBB3F0073D7FA /* JZDatepickerMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E01CDF1ABEBB3F0073D7FA /* JZDatepickerMonthView.m */; };
+		07E01CE61ABEBB3F0073D7FA /* StickyHeaderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E01CE11ABEBB3F0073D7FA /* StickyHeaderFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,16 +45,16 @@
 		07E01CA91ABEB6880073D7FA /* JZDatepickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JZDatepickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E01CAE1ABEB6880073D7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07E01CAF1ABEB6880073D7FA /* JZDatepickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZDatepickerTests.m; sourceTree = "<group>"; };
-		07E01CC91ABEB9360073D7FA /* DIDatePickerCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatePickerCircleView.h; sourceTree = "<group>"; };
-		07E01CCA1ABEB9360073D7FA /* DIDatePickerCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatePickerCircleView.m; sourceTree = "<group>"; };
-		07E01CCB1ABEB9360073D7FA /* DIDatepicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepicker.h; sourceTree = "<group>"; };
-		07E01CCC1ABEB9360073D7FA /* DIDatepicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepicker.m; sourceTree = "<group>"; };
-		07E01CCD1ABEB9360073D7FA /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
-		07E01CCE1ABEB9360073D7FA /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
-		07E01CCF1ABEB9360073D7FA /* DIDatepickerMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerMonthView.h; sourceTree = "<group>"; };
-		07E01CD01ABEB9360073D7FA /* DIDatepickerMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerMonthView.m; sourceTree = "<group>"; };
-		07E01CD11ABEB9360073D7FA /* StickyHeaderFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickyHeaderFlowLayout.h; sourceTree = "<group>"; };
-		07E01CD21ABEB9360073D7FA /* StickyHeaderFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickyHeaderFlowLayout.m; sourceTree = "<group>"; };
+		07E01CD81ABEBB3F0073D7FA /* JZDatepicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZDatepicker.h; path = Sources/JZDatepicker.h; sourceTree = "<group>"; };
+		07E01CD91ABEBB3F0073D7FA /* JZDatepicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZDatepicker.m; path = Sources/JZDatepicker.m; sourceTree = "<group>"; };
+		07E01CDA1ABEBB3F0073D7FA /* JZDatepickerCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZDatepickerCircleView.h; path = Sources/JZDatepickerCircleView.h; sourceTree = "<group>"; };
+		07E01CDB1ABEBB3F0073D7FA /* JZDatepickerCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZDatepickerCircleView.m; path = Sources/JZDatepickerCircleView.m; sourceTree = "<group>"; };
+		07E01CDC1ABEBB3F0073D7FA /* JZDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZDatepickerDateView.h; path = Sources/JZDatepickerDateView.h; sourceTree = "<group>"; };
+		07E01CDD1ABEBB3F0073D7FA /* JZDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZDatepickerDateView.m; path = Sources/JZDatepickerDateView.m; sourceTree = "<group>"; };
+		07E01CDE1ABEBB3F0073D7FA /* JZDatepickerMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JZDatepickerMonthView.h; path = Sources/JZDatepickerMonthView.h; sourceTree = "<group>"; };
+		07E01CDF1ABEBB3F0073D7FA /* JZDatepickerMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JZDatepickerMonthView.m; path = Sources/JZDatepickerMonthView.m; sourceTree = "<group>"; };
+		07E01CE01ABEBB3F0073D7FA /* StickyHeaderFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StickyHeaderFlowLayout.h; path = Sources/StickyHeaderFlowLayout.h; sourceTree = "<group>"; };
+		07E01CE11ABEBB3F0073D7FA /* StickyHeaderFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StickyHeaderFlowLayout.m; path = Sources/StickyHeaderFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,16 +138,16 @@
 		07E01CB91ABEB6F00073D7FA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				07E01CC91ABEB9360073D7FA /* DIDatePickerCircleView.h */,
-				07E01CCA1ABEB9360073D7FA /* DIDatePickerCircleView.m */,
-				07E01CCB1ABEB9360073D7FA /* DIDatepicker.h */,
-				07E01CCC1ABEB9360073D7FA /* DIDatepicker.m */,
-				07E01CCD1ABEB9360073D7FA /* DIDatepickerDateView.h */,
-				07E01CCE1ABEB9360073D7FA /* DIDatepickerDateView.m */,
-				07E01CCF1ABEB9360073D7FA /* DIDatepickerMonthView.h */,
-				07E01CD01ABEB9360073D7FA /* DIDatepickerMonthView.m */,
-				07E01CD11ABEB9360073D7FA /* StickyHeaderFlowLayout.h */,
-				07E01CD21ABEB9360073D7FA /* StickyHeaderFlowLayout.m */,
+				07E01CD81ABEBB3F0073D7FA /* JZDatepicker.h */,
+				07E01CD91ABEBB3F0073D7FA /* JZDatepicker.m */,
+				07E01CDA1ABEBB3F0073D7FA /* JZDatepickerCircleView.h */,
+				07E01CDB1ABEBB3F0073D7FA /* JZDatepickerCircleView.m */,
+				07E01CDC1ABEBB3F0073D7FA /* JZDatepickerDateView.h */,
+				07E01CDD1ABEBB3F0073D7FA /* JZDatepickerDateView.m */,
+				07E01CDE1ABEBB3F0073D7FA /* JZDatepickerMonthView.h */,
+				07E01CDF1ABEBB3F0073D7FA /* JZDatepickerMonthView.m */,
+				07E01CE01ABEBB3F0073D7FA /* StickyHeaderFlowLayout.h */,
+				07E01CE11ABEBB3F0073D7FA /* StickyHeaderFlowLayout.m */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -252,13 +252,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E01CE51ABEBB3F0073D7FA /* JZDatepickerMonthView.m in Sources */,
+				07E01CE61ABEBB3F0073D7FA /* StickyHeaderFlowLayout.m in Sources */,
+				07E01CE31ABEBB3F0073D7FA /* JZDatepickerCircleView.m in Sources */,
 				07E01C9C1ABEB6880073D7FA /* ViewController.m in Sources */,
-				07E01CD71ABEB9360073D7FA /* StickyHeaderFlowLayout.m in Sources */,
-				07E01CD61ABEB9360073D7FA /* DIDatepickerMonthView.m in Sources */,
-				07E01CD41ABEB9360073D7FA /* DIDatepicker.m in Sources */,
-				07E01CD31ABEB9360073D7FA /* DIDatePickerCircleView.m in Sources */,
-				07E01CD51ABEB9360073D7FA /* DIDatepickerDateView.m in Sources */,
+				07E01CE21ABEBB3F0073D7FA /* JZDatepicker.m in Sources */,
 				07E01C991ABEB6880073D7FA /* AppDelegate.m in Sources */,
+				07E01CE41ABEBB3F0073D7FA /* JZDatepickerDateView.m in Sources */,
 				07E01C961ABEB6880073D7FA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +450,7 @@
 				07E01CB51ABEB6880073D7FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07E01CB61ABEB6880073D7FA /* Build configuration list for PBXNativeTarget "JZDatepickerTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +459,7 @@
 				07E01CB81ABEB6880073D7FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

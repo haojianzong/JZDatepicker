@@ -6,9 +6,9 @@
 #import <UIKit/UIKit.h>
 
 
-extern const CGFloat kDIDatepickerHeight;
+extern const CGFloat kJZDatepickerHeight;
 
-@interface DIDatepicker : UIControl <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface JZDatepicker : UIControl <UICollectionViewDataSource, UICollectionViewDelegate>
 
 // data
 @property (strong, nonatomic) NSArray *dates; // you almost always want to sort it chronically

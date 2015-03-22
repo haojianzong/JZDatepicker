@@ -1,22 +1,22 @@
 //
-//  DIDatepickerMonthView.m
-//  DIDatepicker
+//  JZDatepickerMonthView.m
+//  JZDatepicker
 //
 //  Created by haojianzong on 11/12/14.
 //  Copyright (c) 2014 Dmitry Ivanenko. All rights reserved.
 //
 
-#import "DIDatepickerMonthView.h"
+#import "JZDatepickerMonthView.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface DIDatepickerMonthView()
+@interface JZDatepickerMonthView()
 
 @property (strong, nonatomic) UILabel *monthLabel;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 
 @end
 
-@implementation DIDatepickerMonthView
+@implementation JZDatepickerMonthView
 
 - (NSDateFormatter *)dateFormatter
 {

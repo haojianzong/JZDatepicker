@@ -7,10 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "DIDatepicker.h"
+#import "JZDatepicker.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet DIDatepicker *datepicker;
+@property (weak, nonatomic) IBOutlet JZDatepicker *datepicker;
 @property (weak, nonatomic) IBOutlet UILabel *selectedDateLabel;
 
 @end

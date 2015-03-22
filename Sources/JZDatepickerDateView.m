@@ -3,26 +3,26 @@
 //  Copyright (c) 2014 Dmitry Ivanenko. All rights reserved.
 //
 
-#import "DIDatepickerDateView.h"
-#import "DIDatePickerCircleView.h"
+#import "JZDatepickerDateView.h"
+#import "JZDatepickerCircleView.h"
 
 
-const CGFloat kDIDatepickerItemWidth = 70.;
-const CGFloat kDIDatepickerBackgroundCircleWidth = 35.;
+const CGFloat kJZDatepickerItemWidth = 70.;
+const CGFloat kJZDatepickerBackgroundCircleWidth = 35.;
 
 
-@interface DIDatepickerCell ()
+@interface JZDatepickerCell ()
 
 @property (strong, nonatomic) UILabel *dayLabel;
 @property (strong, nonatomic) UILabel *topLabel;
-@property (nonatomic, strong) DIDatePickerCircleView *selectionView;
+@property (nonatomic, strong) JZDatepickerCircleView *selectionView;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @property (nonatomic, strong) NSLayoutConstraint *selectionViewWidthConstraint;
 
 @end
 
 
-@implementation DIDatepickerCell
+@implementation JZDatepickerCell
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -79,7 +79,7 @@ const CGFloat kDIDatepickerBackgroundCircleWidth = 35.;
                                                               toItem:nil
                                                            attribute:NSLayoutAttributeNotAnAttribute
                                                           multiplier:1.0
-                                                            constant:kDIDatepickerBackgroundCircleWidth];
+                                                            constant:kJZDatepickerBackgroundCircleWidth];
     [self addConstraint:self.selectionViewWidthConstraint];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionView
                                                      attribute:NSLayoutAttributeHeight
@@ -187,7 +187,7 @@ const CGFloat kDIDatepickerBackgroundCircleWidth = 35.;
 - (UIView *)selectionView
 {
     if (!_selectionView) {
-        _selectionView = [[DIDatePickerCircleView alloc] init];
+        _selectionView = [[JZDatepickerCircleView alloc] init];
         _selectionView.alpha = 0.0f;
         _selectionView.backgroundColor = self.tintColor;
         _selectionView.opaque = NO;
