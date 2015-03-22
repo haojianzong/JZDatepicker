@@ -6,7 +6,8 @@ A simple horizontal date picker with sticky header, inspired by the [Peek iOS ap
 
 ## Demo Screenshot
 
-![demo](https://github.com/haojianzong/JZDatepicker/blob/master/demo.gif)
+![demo]()
+<img src="https://github.com/haojianzong/JZDatepicker/blob/master/demo.gif"/>
 # Usage
 
 ## Delegate Methods
