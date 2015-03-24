@@ -151,15 +151,7 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 30.;
 - (void)setSelected:(BOOL)selected
 {
     [super setSelected:selected];
-//    self.circleViewWidthConstraint.constant = (selected) ? 35 : 0;
-//    [UIView animateWithDuration:0.3
-//                          delay:0.0
-//                        options:UIViewAnimationOptionCurveEaseOut
-//                     animations:^{
-//                         [self layoutIfNeeded];
-//                     } completion:nil];
     self.circleView.alpha = (selected)?1.0f:0.0f;
-//    self.dayLabel.textColor = (selected)? [UIColor whiteColor] : [UIColor whiteColor];
 }
 
 #pragma mark - Getters
