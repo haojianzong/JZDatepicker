@@ -259,7 +259,6 @@ NSString * const kJZDatepickerHeaderIdentifier = @"kJZDatepickerHeaderIndentifie
 {
     JZDatepickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kJZDatepickerCellIndentifier forIndexPath:indexPath];
     cell.date = [self dateAtIndexPath:indexPath];
-    cell.tintColor = self.tintColor;
     return cell;
 }
 

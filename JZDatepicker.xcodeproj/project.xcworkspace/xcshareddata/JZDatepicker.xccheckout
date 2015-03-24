@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D9330281-B11E-4CDA-8585-2C097F3F20CE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JZDatepicker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AF6E49F76415C1B3D118B50C6034E4F5CC0D1493</key>
+		<string>github.com:haojianzong/JZDatepicker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JZDatepicker.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AF6E49F76415C1B3D118B50C6034E4F5CC0D1493</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:haojianzong/JZDatepicker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AF6E49F76415C1B3D118B50C6034E4F5CC0D1493</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AF6E49F76415C1B3D118B50C6034E4F5CC0D1493</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JZDatepicker</string>
+		</dict>
+	</array>
+</dict>
+</plist>

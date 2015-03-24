@@ -28,6 +28,7 @@
     //    [self.datepicker fillCurrentMonth];
     //    [self.datepicker fillCurrentYear];
     [self.datepicker selectDateAtIndex:0];
+    [self.datepicker setTintColor:[UIColor redColor]];
 }
 
 - (void)didReceiveMemoryWarning {

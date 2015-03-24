@@ -28,11 +28,16 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 30.;
 {
     if(self = [super initWithFrame:frame]){
         [self setBackgroundColor:[UIColor clearColor]];
-        [self setTintColor:[UIColor colorWithRed:1.000f green:0.835f blue:0.404f alpha:1.00f]];
         [self setup];
     }
     
     return self;
+}
+
+- (void)tintColorDidChange
+{
+    [super tintColorDidChange];
+    self.circleView.backgroundColor = self.tintColor;
 }
 
 - (void)setup
@@ -126,10 +131,8 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 30.;
     self.dayLabel.text = dayFormattedString;
     if ( [self isToday:date]) {
         self.topLabel.text = NSLocalizedString(@"today", nil);
-        self.topLabel.textColor = self.tintColor;
     } else {
         self.topLabel.text = [dayInWeekFormattedString uppercaseString];
-        self.topLabel.textColor = [UIColor whiteColor];
     }
 }
 
@@ -179,6 +182,7 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 30.;
         _topLabel = [[UILabel alloc] init];
         _topLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:12];
         _topLabel.textAlignment = NSTextAlignmentCenter;
+        _topLabel.textColor = [UIColor whiteColor];
         [self addSubview:_topLabel];
     }
     return _topLabel;

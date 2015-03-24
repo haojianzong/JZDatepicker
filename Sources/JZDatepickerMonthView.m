@@ -27,6 +27,12 @@
     return _dateFormatter;
 }
 
+- (void)tintColorDidChange
+{
+    [super tintColorDidChange];
+    [self setBackgroundColor:self.tintColor];
+}
+
 - (void)setDate:(NSDate *)date
 {
     _date = date;
@@ -55,7 +61,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         [self setup];
-        [self setBackgroundColor:self.tintColor];
+
     }
     return self;
 }
@@ -82,7 +88,6 @@
     // add border
 //    self.layer.borderColor = [UIColor grayColor].CGColor;
 //    self.layer.borderWidth = 1.0f;
-    self.tintColor = [UIColor colorWithRed:1.000f green:0.835f blue:0.404f alpha:1.00f];
 }
 
 @end
