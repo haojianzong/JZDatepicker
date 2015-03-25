@@ -27,7 +27,6 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 30.;
 - (id)initWithFrame:(CGRect)frame
 {
     if(self = [super initWithFrame:frame]){
-        [self setBackgroundColor:[UIColor clearColor]];
         [self setup];
     }
     
@@ -107,13 +106,14 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 30.;
                                                      attribute:NSLayoutAttributeCenterY
                                                     multiplier:1.0
                                                       constant:0]];
-    
+    self.circleView.backgroundColor = [UIColor yellowColor];
 }
 
 - (void)prepareForReuse
 {
+    [super prepareForReuse];
     [self setSelected:NO];
-    self.circleView.alpha = 0.0f;
+    self.circleView.alpha = 0.3;
 }
 
 #pragma mark - Setters
@@ -140,18 +140,23 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 30.;
 {
     [super setHighlighted:highlighted];
     
-    self.circleView.hidden = NO;
+//    self.circleView.hidden = NO;
     if (highlighted) {
         self.circleView.alpha = self.isSelected ? 1 : .5;
     } else {
-        self.circleView.alpha = self.isSelected ? 1 : 0;
+        self.circleView.alpha = self.isSelected ? 1 : 0.3;
     }
 }
 
 - (void)setSelected:(BOOL)selected
 {
     [super setSelected:selected];
-    self.circleView.alpha = (selected)?1.0f:0.0f;
+//    if (selected) {
+//        self.backgroundColor = [UIColor whiteColor];
+//    } else {
+//        self.backgroundColor = [UIColor blueColor];
+//    }
+    self.circleView.alpha = (selected)?1.0f:0.3f;
 }
 
 #pragma mark - Getters
@@ -184,7 +189,7 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 30.;
 {
     if (!_circleView) {
         _circleView = [[JZDatepickerCircleView alloc] init];
-        _circleView.alpha = 0.0f;
+        _circleView.alpha = 0.3f;
         _circleView.backgroundColor = self.tintColor;
         _circleView.opaque = NO;
         [self addSubview:_circleView];
