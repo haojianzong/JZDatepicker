@@ -13,7 +13,8 @@
 - (id)init
 {
     if(self = [super init]){
-        [self setBackgroundColor:[UIColor blackColor]];
+        // set contentMode to force redraw whenever view size change
+        self.contentMode = UIViewContentModeRedraw;
     }
     
     return self;
@@ -23,7 +24,7 @@
 {
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     CGContextAddEllipseInRect(ctx, rect);
-    CGContextSetFillColor(ctx, CGColorGetComponents([self.backgroundColor CGColor]));
+    CGContextSetFillColor(ctx, CGColorGetComponents([self.bgColor CGColor]));
     CGContextFillPath(ctx);
 }
 

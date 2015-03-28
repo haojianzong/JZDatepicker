@@ -10,6 +10,6 @@
 
 @interface JZDatepickerCircleView : UIView
 
-@property (strong, nonatomic) UIColor *backgroundColor;
+@property (strong, nonatomic) UIColor *bgColor;
 
 @end
