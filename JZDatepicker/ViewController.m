@@ -24,11 +24,14 @@
     [self.datepicker addTarget:self action:@selector(updateSelectedDate) forControlEvents:UIControlEventValueChanged];
     
     [self.datepicker fillDatesFromDate:[NSDate date] numberOfDays:1000];
+    
     //    [self.datepicker fillCurrentWeek];
     //    [self.datepicker fillCurrentMonth];
     //    [self.datepicker fillCurrentYear];
+    
     [self.datepicker selectDateAtIndex:0];
-    [self.datepicker setTintColor:[UIColor redColor]];
+    
+    [self.datepicker setTintColor:[UIColor colorWithRed:0.988f green:0.953f blue:0.106f alpha:1.00f]];
 }
 
 - (void)didReceiveMemoryWarning {

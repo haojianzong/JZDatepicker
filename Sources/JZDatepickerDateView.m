@@ -149,7 +149,13 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 30.;
 - (void)setSelected:(BOOL)selected
 {
     [super setSelected:selected];
-    self.circleView.alpha = (selected)?1.0f:0.0f;
+    if (selected) {
+        self.circleView.alpha = 1.0f;
+        self.dayLabel.textColor = [UIColor blackColor];
+    } else {
+        self.circleView.alpha = 0.0f;
+        self.dayLabel.textColor = [UIColor whiteColor];
+    }
 }
 
 #pragma mark - Getters
