@@ -55,7 +55,7 @@ For easy customization, you can simply change the tint color:
 
     [self.datepicker setTintColor:[UIcolor yellowColor]];
 
-Or, you can change the following view class:
+Or, you can change the following view classes:
 
 - `JZDatepickerDateView`: the date cell;
 
