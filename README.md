@@ -51,7 +51,21 @@ This methods will select a date by a given index.
 
 ## Customization
 
+For easy customization, you can simply change the tint color:
+
     [self.datepicker setTintColor:[UIcolor yellowColor]];
+
+Or, you can change the following view class:
+
+- `JZDatepickerDateView`: the date cell;
+
+- `JZDatepickerMonthView`: the sticky month header;
+
+## Release Notes
+
+Version 0.1
+
+- Prerelease version
 
 ## License:
 Licensed under the MIT license
