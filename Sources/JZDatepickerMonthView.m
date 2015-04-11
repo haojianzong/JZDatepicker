@@ -43,7 +43,7 @@
 {
     [self.dateFormatter setDateFormat:@"MMM"];
     NSString *month = [self.dateFormatter stringFromDate:self.date];
-    self.monthLabel.text = month;
+    self.monthLabel.text = [month uppercaseString];
 }
 
 - (UILabel *)monthLabel

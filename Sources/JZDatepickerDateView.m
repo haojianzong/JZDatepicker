@@ -129,7 +129,7 @@ const CGFloat kJZDatepickerBackgroundCircleWidth = 30.;
     
     self.dayLabel.text = dayFormattedString;
     if ( [self isToday:date]) {
-        self.topLabel.text = NSLocalizedString(@"today", nil);
+        self.topLabel.text = [NSLocalizedString(@"today", nil) uppercaseString];
     } else {
         self.topLabel.text = [dayInWeekFormattedString uppercaseString];
     }
