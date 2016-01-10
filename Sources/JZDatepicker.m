@@ -174,7 +174,7 @@ NSString * const kJZDatepickerHeaderIdentifier = @"kJZDatepickerHeaderIndentifie
 
 - (void)fillDatesFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate
 {
-    NSAssert([fromDate compare:toDate] == NSOrderedAscending, @"toDate must be after fromDate");
+    NSAssert(([fromDate compare:toDate] == NSOrderedAscending) || ([fromDate compare:toDate] == NSOrderedSame), @"toDate must be after or equal to fromDate");
     
     NSMutableArray *dates = [[NSMutableArray alloc] init];
     NSDateComponents *days = [[NSDateComponents alloc] init];
